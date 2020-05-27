@@ -101,7 +101,7 @@ class _TurmaScreenState extends State<TurmaScreen> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    "/turmas",
+                    "/turma",
                   );
                 },
               ),

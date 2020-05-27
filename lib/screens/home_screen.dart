@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   child: new Image.asset('chamada.png'),
                   onTap: () async {
-                    Navigator.pushNamed(context, "/turmas");
+                    Navigator.pushNamed(context, "/turma");
                   },
                 ),
               ],
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    "/turmas",
+                    "/turma",
                   );
                 },
               ),
