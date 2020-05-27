@@ -1,5 +1,6 @@
 import 'package:fiap/screens/alunos_novo_screen.dart';
 import 'package:fiap/screens/chamada_screen.dart';
+import 'package:fiap/screens/chamadas_detalhes_screen.dart';
 import 'package:fiap/screens/correcao_screen.dart';
 import 'package:fiap/screens/home_screen.dart';
 import 'package:fiap/screens/trabalhos_screen.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/trabalhos': (context) => TrabalhosScreen(),
         '/turma': (context) => TurmaScreen(),
         '/novo': (context) => AlunosNovoScreen(),
+        '/detalhes': (context) => ChamadaDetalhesScreen(),
       },
       title: 'FIAP',
       theme: ThemeData(

@@ -19,7 +19,7 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Novo Aluno"),
+        title: Text("Nova chamada"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -32,12 +32,12 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                   TextFormField(
                     decoration: new InputDecoration(
                       icon: const Icon(Icons.text_fields),
-                      hintText: 'Digite o nome do Aluno',
-                      labelText: 'Nome',
+                      hintText: 'Digite o nome da aula',
+                      labelText: 'Nome da aula',
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
-                        return 'Digite o nome do aluno';
+                        return 'Digite o nome da aula';
                       }
                       return null;
                     },
@@ -48,12 +48,12 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                   TextFormField(
                     decoration: new InputDecoration(
                       icon: const Icon(Icons.text_fields),
-                      hintText: 'Digite o sobrenome do Aluno',
-                      labelText: 'SobreNome',
+                      hintText: 'Digite a data',
+                      labelText: 'Data',
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
-                        return 'Digite o sobrenome do aluno';
+                        return 'Digite a data';
                       }
                       return null;
                     },
@@ -61,42 +61,10 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                       alunoModel.sobrenome = value;
                     },
                   ),
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      icon: const Icon(Icons.text_fields),
-                      hintText: 'Digite a turma do Aluno',
-                      labelText: 'Turma',
-                    ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'Digite a turma do aluno';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      alunoModel.turma = value;
-                    },
-                  ),
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      icon: const Icon(Icons.text_fields),
-                      hintText: 'Presenças',
-                      labelText: 'Presenças',
-                    ),
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return 'Presenças';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      alunoModel.presenca = value;
-                    },
-                  ),
-                  /*DropdownButtonFormField<String>(
+                  DropdownButtonFormField<String>(
                     value: alunoModel.turma,
                     items:
-                        ["3SIA", "3SIB", "3SIC", "3SID"]
+                        ["Presente", "Faltou"]
                             .map((label) => DropdownMenuItem(
                                   child: Text(label),
                                   value: label,
@@ -105,12 +73,12 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                     decoration: new InputDecoration(
                       alignLabelWithHint: true,
                       icon: const Icon(Icons.score),
-                      hintText: 'Selecione a turma',
-                      labelText: 'Turma',
+                      hintText: 'Presente?',
+                      labelText: 'Aluno 1 Presente?',
                     ),
                     validator: (value) {
                       if ((value == null)) {
-                        return 'Selecione a Turma';
+                        return 'Selecione a presença';
                       }
                       return null;
                     },
@@ -122,13 +90,38 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                         alunoModel.turma = value;
                       });
                     },
-                  ),*/
-
-                  
-                  
-
-
-
+                  ),
+                 DropdownButtonFormField<String>(
+                    value: alunoModel.presenca,
+                    items:
+                        ["Presente", "Faltou"]
+                            .map((label) => DropdownMenuItem(
+                                  child: Text(label),
+                                  value: label,
+                                ))
+                            .toList(),
+                    decoration: new InputDecoration(
+                      alignLabelWithHint: true,
+                      icon: const Icon(Icons.score),
+                      hintText: 'Presente?',
+                      labelText: 'Aluno 2 Presente?',
+                    ),
+                    validator: (value) {
+                      if ((value == null)) {
+                        return 'Selecione a presença';
+                      }
+                      return null;
+                    },
+                    onSaved: (value) {
+                      alunoModel.presenca = value;
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        alunoModel.presenca = value;
+                      });
+                    },
+                  ),
+  
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: RaisedButton(

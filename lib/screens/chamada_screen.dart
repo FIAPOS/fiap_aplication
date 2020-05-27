@@ -16,7 +16,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Alunos"),
+        title: Text("Chamadas"),
       ),
       body: FutureBuilder<List>(
         future: alunoRepository.findAll(),
@@ -130,7 +130,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
           onTap: () async {
             await Navigator.pushNamed(
               context,
-              "/alunos_detalhes",
+              "/detalhes",
               arguments: alunos,
             );
 
