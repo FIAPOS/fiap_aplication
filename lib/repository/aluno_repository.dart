@@ -51,7 +51,7 @@ class AlunoRepository {
         "VALUES ( " +
         "    '${alunoModel.nome}' , " +
         "    '${alunoModel.sobrenome}' , " +
-        "    ${alunoModel.turma}, " +
+        "    '${alunoModel.turma}', " +
         "    '${alunoModel.presenca}' " +
         "  ) ";
 

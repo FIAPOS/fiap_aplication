@@ -100,21 +100,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
         child: ListTile(
           contentPadding:
               EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-          leading: Container(
-            padding: EdgeInsets.only(right: 12.0),
-            decoration: new BoxDecoration(
-              border: new Border(
-                right: new BorderSide(
-                  width: 1.0,
-                  color: Colors.white24,
-                ),
-              ),
-            ),
-            child: Icon(
-              Icons.autorenew,
-              color: Colors.white,
-            ),
-          ),
+          
           title: Text(
             alunos.nome,
             style: TextStyle(
@@ -124,16 +110,6 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
           ),
           subtitle: Row(
             children: <Widget>[
-              Expanded(
-                flex: 2,
-                child: Container(
-                  child: LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(209, 224, 224, 0.2),
-                    
-                    valueColor: AlwaysStoppedAnimation(Colors.green),
-                  ),
-                ),
-              ),
               Expanded(
                 flex: 3,
                 child: Padding(
