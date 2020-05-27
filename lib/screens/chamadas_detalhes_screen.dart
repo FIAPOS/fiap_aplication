@@ -19,8 +19,8 @@ class _ChamadaDetalhesScreenState extends State<ChamadaDetalhesScreen> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text(alunoModel.nome),
+        backgroundColor: Colors.grey[300],
+        title: Text(alunoModel.nome, style: TextStyle(fontSize: 20.0, color: Colors.black)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -48,7 +48,7 @@ class _ChamadaDetalhesScreenState extends State<ChamadaDetalhesScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_back),
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
+        backgroundColor: Colors.pink[500],
         onPressed: () {
           Navigator.pop(context);
         },

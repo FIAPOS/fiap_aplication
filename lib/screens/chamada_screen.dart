@@ -15,9 +15,13 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Chamadas"),
-      ),
+          iconTheme: new IconThemeData(color: Colors.grey[400]),
+          title: Text(
+              "Chamadas",
+              style: new TextStyle(fontSize: 20.0, color: Colors.grey),
+            ),
+          backgroundColor: Colors.grey[200],
+        ),
       body: FutureBuilder<List>(
         future: alunoRepository.findAll(),
         builder: (context, snapshot) {
@@ -35,7 +39,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
+        backgroundColor: Colors.pink[500],
         child: Icon(Icons.add),
         onPressed: () async {
           var retorno = await Navigator.pushNamed(context, "/novo");
@@ -71,7 +75,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               alignment: AlignmentDirectional.centerEnd,
-              color: Colors.redAccent,
+              color: Colors.pink[500],
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
                 child: Icon(
@@ -88,14 +92,19 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
 
   Card cardAluno(AlunoModel alunos) {
     return Card(
+      clipBehavior: Clip.antiAlias,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
       elevation: 12.0,
       margin: new EdgeInsets.symmetric(
-        horizontal: 12.0,
-        vertical: 6.0,
+        horizontal: 15.0,
+        vertical: 10.0,
       ),
+      
       child: Container(
         decoration: BoxDecoration(
-          color: Color.fromRGBO(64, 75, 96, .9),
+          color: Colors.grey[300],
         ),
         child: ListTile(
           contentPadding:
@@ -104,7 +113,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
           title: Text(
             alunos.nome,
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black87,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -113,10 +122,10 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
               Expanded(
                 flex: 3,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 10.0),
+                  padding: EdgeInsets.only(left: 0.0),
                   child: Text(
-                    "",
-                    style: TextStyle(color: Colors.white),
+                    alunos.sobrenome,
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               )
@@ -124,7 +133,7 @@ class _ChamadaScreenState extends State<ChamadaScreen> {
           ),
           trailing: Icon(
             Icons.keyboard_arrow_right,
-            color: Colors.white,
+            color: Colors.black,
             size: 30.0,
           ),
           onTap: () async {
