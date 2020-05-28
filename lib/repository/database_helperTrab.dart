@@ -1,20 +1,20 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-class DatabaseHelper {
+class DatabaseHelperTrab {
   // Instancia do SQFLite Database
   static Database _database;
 
   // Instancia da classe Helper
-  static final DatabaseHelper _instance = DatabaseHelper._internal();
+  static final DatabaseHelperTrab _instance = DatabaseHelperTrab._internal();
 
   // Fábrica de construtor
-  factory DatabaseHelper() {
+  factory DatabaseHelperTrab() {
     return _instance;
   }
 
   // Construtor nomeado 
-  DatabaseHelper._internal();
+  DatabaseHelperTrab._internal();
 
   
 
@@ -28,7 +28,7 @@ class DatabaseHelper {
 
   Future<Database> _createDatabase() async {
     String databasesPath = await getDatabasesPath();
-    String dbPath = join(databasesPath, 'alunos.db');
+    String dbPath = join(databasesPath, 'trabalho.db');
 
     var database = await openDatabase(
       dbPath,
@@ -43,12 +43,12 @@ class DatabaseHelper {
     // Criando a tabela de alunos
     await database.execute(
       '''
-      CREATE TABLE AlunoModel (
+      CREATE TABLE TrabalhoModel (
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         nome TEXT,
-        sobrenome TEXT,
-        turma TEXT,
-        presenca TEXT
+        nota TEXT,
+        comentario TEXT,
+        integrantes TEXT
       )
       ''',
     );

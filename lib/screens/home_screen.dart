@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   child: new Image.asset('correcao.png'),
                   onTap: () async {
-                    Navigator.pushNamed(context, "/correcoes");
+                    Navigator.pushNamed(context, "/trabalhos");
                   },
                 ),
                 new Padding(
