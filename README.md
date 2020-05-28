@@ -1,16 +1,46 @@
-# fiap
+<p align="center">FIAP App Concept</p>
 
-A new Flutter project.
+<p align = "center">
+<img src="https://github.com/GustavoDuregger/fiap_aplication/blob/master/Screenshot.png" width="1000px">
+</p>
 
-## Getting Started
+## :sparkles: Technology
 
-This project is a starting point for a Flutter application.
+This project was developed with these technologies:
 
-A few resources to get you started if this is your first Flutter project:
+- [Dart](https://dart.dev/)
+- [Flutter](https://flutter.dev/)
+- [SQFLite (SQLite)](https://pub.dev/packages/sqflite)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 💻 Project
+
+Concept application to assist professors.
+
+<br>
+
+## :cyclone: Getting Started
+
+### Prerequisites
+
+* Flutter SDK
+* IDE (VSCode or Android Studio)
+* OS emulator or a physical cell phone
+
+### Clone
+Clone the repository on your machine
+
+```git clone https://github.com/GustavoDuregger/fiap_aplication.git```
+
+### Get packages
+```flutter pub get```
+
+### Run
+```flutter run```
+
+or select Run and Debug in IDE
+
+---
+
+Developed with ♥ by [Gustavo Duregger](https://gduregger.com)
