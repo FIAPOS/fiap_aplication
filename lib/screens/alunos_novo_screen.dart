@@ -18,8 +18,8 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Nova chamada"),
+        backgroundColor: Colors.grey[300],
+        title: Text("Nova chamada", style: new TextStyle(fontSize: 20.0, color: Colors.black)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -47,7 +47,7 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                   ),
                   TextFormField(
                     decoration: new InputDecoration(
-                      icon: const Icon(Icons.text_fields),
+                      icon: const Icon(Icons.date_range),
                       hintText: 'Digite a data',
                       labelText: 'Data',
                     ),
@@ -72,7 +72,7 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                             .toList(),
                     decoration: new InputDecoration(
                       alignLabelWithHint: true,
-                      icon: const Icon(Icons.score),
+                      icon: const Icon(Icons.assignment_ind),
                       hintText: 'Presente?',
                       labelText: 'Aluno 1 Presente?',
                     ),
@@ -102,7 +102,7 @@ class _AlunosNovoScreenState extends State<AlunosNovoScreen> {
                             .toList(),
                     decoration: new InputDecoration(
                       alignLabelWithHint: true,
-                      icon: const Icon(Icons.score),
+                      icon: const Icon(Icons.assignment_ind),
                       hintText: 'Presente?',
                       labelText: 'Aluno 2 Presente?',
                     ),

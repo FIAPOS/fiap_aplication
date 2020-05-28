@@ -19,8 +19,8 @@ class _TrabalhoNovoScreenState extends State<TrabalhoNovoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Novo Trabalho"),
+        backgroundColor: Colors.grey[300],
+        title: Text("Novo Trabalho", style: new TextStyle(fontSize: 20.0, color: Colors.black)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

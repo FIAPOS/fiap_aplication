@@ -16,8 +16,8 @@ class _CorrecaoScreenState extends State<CorrecaoScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(64, 75, 96, .9),
-        title: Text("Correção"),
+        backgroundColor: Colors.grey[300],
+        title: Text("Correção", style: new TextStyle(fontSize: 20.0, color: Colors.black)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,7 +29,7 @@ class _CorrecaoScreenState extends State<CorrecaoScreen> {
                 children: <Widget>[
                   
                   TextFormField(
-                    initialValue: trabalhoModel.nota,
+                    initialValue: trabalhoModel.comentario,
                     decoration: new InputDecoration(
                       icon: const Icon(Icons.text_fields),
                       hintText: 'Digite um comentario',
@@ -40,9 +40,9 @@ class _CorrecaoScreenState extends State<CorrecaoScreen> {
                     },
                   ),
                   TextFormField(
-                    initialValue: trabalhoModel.comentario,
+                    initialValue: trabalhoModel.nota,
                     decoration: new InputDecoration(
-                      icon: const Icon(Icons.monetization_on),
+                      icon: const Icon(Icons.tag_faces),
                       hintText: 'Digite a nota',
                       labelText: 'Nota',
                     ),
