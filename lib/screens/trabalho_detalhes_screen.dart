@@ -42,7 +42,35 @@ class _TrabalhoDetalhesScreenState extends State<TrabalhoDetalhesScreen> {
             labelValue('Comentários'),
             fieldValue(trabalhoModel.comentario),
             espaco(),
-            
+            Center(
+              child: RaisedButton(
+                color: Color.fromRGBO(64, 75, 96, .9),
+                textColor: Colors.white,
+                child: Text("Corrigir"),
+                onPressed: () async {
+                  var retorno = await Navigator.pushNamed(
+                    context,
+                    "/correcao",
+                    arguments: trabalhoModel,
+                  );
+
+                  if (retorno != null) {
+
+                    trabalhoModel = retorno as TrabalhoModel;
+
+                    setState(() { });
+
+                    scaffoldKey.currentState.showSnackBar(
+                      new SnackBar(
+                        content: Text(
+                          'Corrigido com sucesso!',
+                        ),
+                      ),
+                    );
+                  }
+                },
+              ),
+            )
           ],
         ),
       ),

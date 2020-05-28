@@ -110,8 +110,8 @@ class TrabalhosRepository {
     var sqlCommand = " UPDATE TrabalhoModel SET  " +
         "  nome = '${trabalhoModel.nome}' , " +
         "  nota = '${trabalhoModel.nota}' , " +
-        "  comentario = ${trabalhoModel.comentario} , " +
-        "  integrantes = ${trabalhoModel.integrantes} , " +
+        "  comentario = '${trabalhoModel.comentario}' , " +
+        "  integrantes = '${trabalhoModel.integrantes}' " +
         " WHERE id = ${trabalhoModel.id} ";
 
     var result = await connection.rawUpdate(sqlCommand);

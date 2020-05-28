@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/detalhes': (context) => ChamadaDetalhesScreen(),
         '/novoTrab': (context) => TrabalhoNovoScreen(),
         '/detalhesTrab': (context) => TrabalhoDetalhesScreen(),
+        '/correcao': (context) => CorrecaoScreen(),
       },
       title: 'FIAP',
       theme: ThemeData(
