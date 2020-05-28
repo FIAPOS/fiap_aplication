@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   child: new Image.asset('web.png'),
                   onTap: () async {
-                    Navigator.pushNamed(context, "/correcoes");
+                    await launch('https://www2.fiap.com.br/');
                   },
                 ),
                 
