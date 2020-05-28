@@ -42,7 +42,7 @@ class _TrabalhosScreenState extends State<TrabalhosScreen> {
         backgroundColor: Colors.pink[500],
         child: Icon(Icons.add),
         onPressed: () async {
-          var retorno = await Navigator.pushNamed(context, "/novo");
+          var retorno = await Navigator.pushNamed(context, "/novoTrab");
 
           if (retorno != null) {
             setState(() {});
@@ -124,7 +124,7 @@ class _TrabalhosScreenState extends State<TrabalhosScreen> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 0.0),
                   child: Text(
-                    trabalho.nota,
+                    trabalho.integrantes,
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
@@ -139,7 +139,7 @@ class _TrabalhosScreenState extends State<TrabalhosScreen> {
           onTap: () async {
             await Navigator.pushNamed(
               context,
-              "/detalhes",
+              "/detalhesTrab",
               arguments: trabalho,
             );
 
